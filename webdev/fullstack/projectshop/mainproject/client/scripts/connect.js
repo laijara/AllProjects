@@ -1,6 +1,6 @@
  // Функция для загрузки списка пользователей
  async function loadUsers() {
-    const response = await fetch('/sellnegr'); // GET-запрос на сервер
+    const response = await fetch('http://localhost:3000/sellnegr'); // GET-запрос на сервер
     const users = await response.json(); // Получаем JSON-ответ
     const userList = document.getElementById('userList');
     userList.innerHTML = users.map(user => `<li>${user.negr_name} ${user.negr_post} ${user.nerg_history} ${user.negr_price}</li>`).join('');
