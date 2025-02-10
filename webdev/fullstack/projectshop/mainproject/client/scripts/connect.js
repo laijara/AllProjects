@@ -13,7 +13,7 @@ document.getElementById('addUserForm').addEventListener('submit', async (e) => {
     const data = Object.fromEntries(formData.entries()); // Преобразуем в объект
 
     // Отправляем POST-запрос на сервер
-    await fetch('/sellnegr', {
+    await fetch('http://localhost:3000/sellnegr', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data) // Отправляем данные в формате JSON
